@@ -1,28 +1,59 @@
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+// Load users from users.json (simulate file-based storage with localStorage for now)
+function loadUsers() {
+    const users = localStorage.getItem('users');
+    return users ? JSON.parse(users) : [];
+}
+
+// Save users to users.json (simulate with localStorage)
+function saveUsers(users) {
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+// Register Form Handler
+document.getElementById('registerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    
-    // Normally you'd send the username and password to the server for validation.
-    // For now, we just display a message.
+    const confirmPassword = document.getElementById('confirmPassword').value;
     const statusElement = document.getElementById('status');
-    statusElement.textContent = `Logging in as ${username}...`;
-    
-    // Simulate successful login for demo purposes
-    setTimeout(() => {
-        statusElement.textContent = `Welcome, ${username}!`;
-    }, 1500);
+
+    if (password !== confirmPassword) {
+        statusElement.textContent = 'Passwords do not match!';
+        return;
+    }
+
+    const users = loadUsers();
+    const userExists = users.some(user => user.username === username);
+
+    if (userExists) {
+        statusElement.textContent = 'Username is already taken!';
+        return;
+    }
+
+    // Register user
+    users.push({ username, password });
+    saveUsers(users);
+
+    statusElement.textContent = 'User registered successfully!';
+    statusElement.style.color = 'green';
 });
 
-// GitHub login handling
-document.getElementById('githubLogin').addEventListener('click', function() {
-    const clientID = 'YOUR_GITHUB_CLIENT_ID';
-    const redirectURI = 'YOUR_REDIRECT_URI'; // The URL that GitHub will redirect to after login
+// Login Form Handler
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    // GitHub OAuth URL for login
-    const githubLoginUrl = `https://github.com/login/oauth/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&scope=user`;
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+    const loginStatus = document.getElementById('loginStatus');
 
-    // Redirect the user to GitHub login
-    window.location.href = githubLoginUrl;
+    const users = loadUsers();
+    const user = users.find(user => user.username === username && user.password === password);
+
+    if (user) {
+        loginStatus.textContent = 'Login successful!';
+        loginStatus.style.color = 'green';
+    } else {
+        loginStatus.textContent = 'Invalid username or password!';
+    }
 });
