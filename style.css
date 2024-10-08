@@ -42,3 +42,285 @@ input[type="submit"]:hover {
 p {
     color: red;
 }
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #3c3f41;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 4px solid  #3b0053;
+}
+
+.logo img {
+    height: 150px;
+    whidth: 300px;
+    align-content: center;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.vote-container {
+    border: 2px solid #454545; /* Border around the container */
+    padding: 20px;
+    width: 1200px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    background-color: #454545; /* Light background color */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.server-rules-container {
+    border: 2px solid #454545; /* Border around the container */
+    padding: 20px;
+    width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    background-color: #454545; /* Light background color */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.vote-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #370039; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.vote-button:hover {
+    background-color: #bb00c2; /* Darker green on hover */
+}
+
+.vote-button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #370039; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.vote-button2:hover {
+    background-color: #cc00b1; /* Darker green on hover */
+}
+
+.avs {
+    color: #ffb042;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #3b0053;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('minecraft-background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #3b0053;
+    color: #fffefe;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3b0053;
+}
+
+.server-ip {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.server-ip span {
+    font-weight: bold;
+    color: #fdfd00;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.store-button {
+    background-color: #3b0053;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.store-button:hover {
+    background-color: #4c006a;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: #2d2d2d;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.gallery2 {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    text-align: center;
+    position: relative;
+    border: 2px solid #454545;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto; 
+    background-color: #454545; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.partners {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 20px;
+        text-align: center;
+        position: relative;
+        border: 2px solid #454545;
+        padding: 20px;
+        width: 1000px;
+        margin: 0; 
+        background-color: #454545; 
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+.partners img {
+    width: 100px; /* Adjust the size of the images */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+
+.gallery-grid img {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #3c3f41;
+    padding: 1rem;
+    text-align: center;
+    border-top: 4px solid #3b0053;
+}
+
+footer a {
+    color: #3b0053;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3b0053;
+}
+
+.store {
+    color: #3b0053；
