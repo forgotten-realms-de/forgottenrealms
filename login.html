@@ -7,26 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <header>
-        <div class="logo">
-            <img src="forgottenrealmsbettersummer.PNG" alt="Minecraft Server Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="test.html">Home</a></li>
-                <li><a href="https://surfhosting.co">Hosting</a></li>
-                <button class="store-button" onclick="window.location.href='https://forgottenrealms.store.playerlands.com';">Store</button><li><a href="discord.html">Discord</a></li>
-                <li><a href="voting.html">Voting</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br>
-        <br>
-            <br>
     <div class="login-container">
         <h2>Login</h2>
         <form id="loginForm">
-            <label for="username">Username</label>
+            <label for="username">Minecraft Username</label>
             <input type="text" id="loginUsername" name="username" required>
 
             <label for="password">Password</label>
@@ -35,8 +19,14 @@
             <input type="submit" value="Login">
         </form>
 
+        <div id="welcomeMessage" style="display: none;">
+            <h2 id="welcomeText"></h2>
+            <img id="playerHead" alt="Minecraft Player Head" />
+        </div>
+
         <p id="loginStatus"></p>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
