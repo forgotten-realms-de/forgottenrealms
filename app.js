@@ -55,6 +55,11 @@ document.getElementById('registerForm').addEventListener('submit', async functio
 
     statusElement.textContent = 'User registered successfully!';
     statusElement.style.color = 'green';
+
+    // Redirect to login page after successful registration
+    setTimeout(() => {
+        window.location.href = 'login.html';  // Redirect to login page
+    }, 2000);  // Wait for 2 seconds before redirecting
 });
 
 // Login Form Handler
@@ -81,6 +86,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
         // Show welcome message and player head
         document.getElementById('welcomeMessage').style.display = 'block';
+
+        // Redirect to the main page after successful login
+        setTimeout(() => {
+            window.location.href = 'index.html';  // Redirect to home or main page
+        }, 2000);  // Wait for 2 seconds before redirecting
     } else {
         loginStatus.textContent = 'Invalid username or password!';
     }
