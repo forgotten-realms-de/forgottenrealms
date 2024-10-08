@@ -4,38 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
+    <div class="container">
+        <h1>Login</h1>
         <form id="loginForm">
-            <label for="username">Minecraft Username</label>
-            <input type="text" id="loginUsername" name="username" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="loginPassword" name="password" required>
-
-            <input type="submit" value="Login">
+            <input type="text" id="loginUsername" placeholder="Username" required />
+            <input type="password" id="loginPassword" placeholder="Password" required />
+            <button type="submit">Login</button>
+            <div id="loginStatus" class="status-message"></div>
         </form>
-
         <div id="welcomeMessage" style="display: none;">
             <h2 id="welcomeText"></h2>
-            <img id="playerHead" alt="Minecraft Player Head" />
+            <img id="playerHead" alt="Player Head" />
         </div>
-
-        <p id="loginStatus"></p>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
     </div>
-
-    <script src="app.js"></script>
-        <footer>
-        <p>&copy; 2024 Forgotten Realms. All Rights Reserved.</p>
-        <p>Join our <a href="discord.html">Discord</a> | <a href​⬤
-              <div>
-            <nav>                                                          <ul>
-<li><a href="guidelines.html">Guidelines</a></li><li><a href="#">Imprint</a></li> <li><a href="#">Privacy Policy</a></li>
-</ul>            
-</nav>
-</div>
+    <script src="script.js"></script>
 </body>
 </html>
